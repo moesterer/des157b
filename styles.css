@@ -1,128 +1,259 @@
-/* CSS Resets */
-* {
-    box-sizing: border-box;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-    height: auto;
-}
-
 /* Page styling */
 body {
-    background-color: #333;
-    color: rgb(235, 235, 235);
-    transition: all 2s;
+    margin: 0;
+    min-height: 100vh;
+    background: url("images/bkg.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative; 
+    overflow-x: hidden;
+
+    --accent: #bfe9ff;
+    --panel: #bfe9ff; 
+    --text-dark: #17345f;
+    --hover-bg: rgba(23, 52, 95, 0.14);
+    --click-bg: #bfe9ff;
 }
 
 body.switch {
-    background-color: rgb(235, 235, 235);
-    color: #333;
+    --accent: #FFD966; 
+    --panel: rgba(255, 217, 102, 0.8);
+    --hover-bg: #ffc400cc;
+    --click-bg: #FFD966;
 }
 
-#container {
+#container { 
     position: relative;
-    width: 100%;
+    z-index: 1;
+    width: 100%; 
+
     max-width: 1366px;
-    /* make sure the columns don't get too small and text stays readable */
     min-width: 900px;
-    margin: 1em auto;
-    padding-top: 2em;
+    min-height: 100vh; 
+    margin: 0 auto;
+    padding: 2em 2em 3.5em 2em;
+}
+
+header,
+main {
+    width: 1100px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 header {
-    margin: 0 auto 2em auto;
+    margin-bottom: 2em; 
 }
 
 #banner {
-    position: relative;
-    display: flex;
-    width: 1100px;
-    height: 250px;
-    margin: auto;
-    background-color: rgb(235, 235, 235);
-    color: #333;
-    overflow: hidden;
-    display: grid;
-	place-items: center;
+    width: 100%;
+    min-height: 160px;
+    display: flex; 
+    align-items: flex-start;
+    background: none;
 }
 
-#banner.switch {
-    background-color: #333;
-    color: rgb(235, 235, 235);
-    transition: all 2s;
+#banner-text {
+    width: 100%;
+    margin: 0;
+    color: var(--accent);
+
+    font-family: "Caveat", cursive;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+
+    text-align: left;
+    transition: 
+        color 1.2s ease,
+        text-align 1.2s ease,
+        transform 0.4s ease,
+        opacity 0.3s ease,
+        letter-spacing 0.4s ease;
+
+}
+
+body.switch #banner-text {
+    text-align: right; 
+}
+
+#banner-text.animating {
+    letter-spacing: 0.12em;
+    opacity: 0.9;
+    transform: translateY(6px);
+}
+
+body::after {
+    content: ""; 
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    
+    width: 32vw;
+    height: 32vw;
+    border-radius: 50%;
+
+    background: transparent;
+    box-shadow: 0 0 0 3000px rgba(0, 0, 0, 1);
+
+    pointer-events: none; 
+    z-index: 0;
+
+    transition:
+        width 1.6s ease,
+        height 1.6s ease,
+        right 1.6s ease,
+        bottom 1.6s ease;
+}
+
+
+body.switch::after {
+    width: 220vmax;
+    height: 220vmax;
+    right: -60vmax; 
+    bottom: -60vmax; 
 }
 
 main {
+    position: relative;
     display: flex;
-    justify-content: space-evenly;
-    margin: 1em auto;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 2em; 
+    margin-bottom: 2em;
 }
 
 main section {
     flex: 1;
-    border: 1px rgb(235, 235, 235) dashed;
-    margin: 0 .25em;
-    padding: 1em;
+    padding: 1.4em 1.25em;
+    background: var(--panel);
+    color: var(--text-dark);
+
+    transition: background-color 1.2s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-a {
-    text-decoration: none;
+
+#projects {
+    border-radius: 40px 12px 36px 18px; 
+}
+
+#research {
+    border-radius: 18px 42px 14px 36px;
+}
+
+#development {
+    border-radius: 34px 16px 40px 10px; 
+}
+
+#capstone {
+    border-radius: 16px 38px 20px 44px;
+}
+
+main section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12); 
+}
+
+main section h2,
+section a,
+footer {
+    color: var(--text-dark);
+    font-family: "Quicksand", sans-serif;
+
+}
+
+main section h2 {
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    font-size: 1.2rem;
+    font-weight: 700; 
 }
 
 nav ol, nav ul {
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
+    list-style: none;
+    margin: 0; 
+    padding: 0;
 }
 
 section li {
-    padding-left: 1.2em;
+    margin-bottom: 0.15em;
 }
 
 section a {
-    line-height: 1.1em;
     display: inline-block;
-    padding: .5em;
-    color: orange;
-}
+    padding: 0.3em 0.55em;
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 0.98rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.25s ease, opacity 0.25s ease;
+} 
 
 section a:hover {
-    background-color: orange;
-    color: #333;
+    background: var(--hover-bg);
+    transform: translateX(4px);
+    opacity: 1;
+}
+section a:active {
+    background: var(--click-bg);
+    color: var(--text-dark);
 }
 
-section.switch a {
-    color: #333;
-}
-
-section.switch a:hover {
-    background-color: #333;
-    color: rgb(235, 235, 235);
-}
-
-button {
+#mode-toggle {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 12px;
-    background-color: orange;
-    color: #333;
-    border: 1px solid transparent;
-}
+    top: 30px;
+    right: 30px;
+    width: 90px;
+    height: 145px;
 
-button:hover {
-    background-color: coral;
+    display: block; 
     cursor: pointer;
+    z-index: 4;
+    transition: transform 0.2s ease;
 }
 
-button.switch {
-    background-color: rgb(235, 235, 235);
-    border-color: #333;
+#mode-toggle:hover {
+    transform: scale(1.03);
 }
 
-button.switch:hover {
-    background-color: #333;
-    color: rgb(235, 235, 235)
+footer {
+    position: fixed;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    z-index: 3;
+    color: var(--text-dark);
+
+    background: rgba(191, 233, 255, 1);
+    padding: 0.6em 1.1em;
+
+    border-radius: 999px;
+    width: fit-content;
+    max-width: calc(100% - 40px);
 }
+
+footer p {
+    margin: 0; 
+    font-family: "Quicksand", sans-serif;
+}
+
+
+body.switch footer {
+    background: rgba(255, 217, 102, 0.9); 
+}
+
+
+
+
+
+
+
+
+
