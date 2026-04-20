@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fall Video Poem</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href="styles.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="script.js" defer></script>
+    
+</head>
+
+<body>
+    <video id="myVideo" autoplay muted loop playsinline>
+        <source src="media/fall.webm" type="video/webm">
+        <source src="media/fall.mp4" type="video/mp4">
+        <p>Your browser doesn't support HTML5 video.
+            Here is a <a href="media/fall.mp4">link to the video</a> instead.</p>
+    </video>
+
+    <p id="loading">get ready to...</p>
+
+    <section id="controls">
+        <i class="fa-solid fa-volume-mute" id="soundToggle"></i>
+        <i class="fas fa-expand" id="fs"></i>
+    </section>
+
+    <section id="poem">
+        <p id="line1" class="hidden">The only way forward</p>
+        <p id="line2" class="hidden">is to take the fall</p>
+        <p id="line3" class="hidden">and trust</p>
+        <p id="line4" class="hidden">that you will learn how to fly</p>
+        <p id="line5" class="hidden">on the way down</p> 
+    </section>
+
+    <section id="leapOverlay" class="hidden">
+
+        <svg id="leapSvg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+                <mask id="textMask">
+                    <rect width="100" height="100" fill="white"></rect>
+                    <text x="50" y="52" text-anchor="middle" dominant-baseline="middle">LEAP</text> 
+                    
+                </mask> 
+            </defs>
+            <rect width="100" height="100" fill="black" mask="url(#textMask)"></rect>
+
+        </svg>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
