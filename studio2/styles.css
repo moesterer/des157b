@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #EFE3DA;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#page {
+    position: relative;
+    width: 1200px;
+    height: 750px;
+    overflow: hidden;
+    background: #EFE3DA;
+    font-synthesis: none;
+}
+
+#stain {
+    position: absolute;
+    top: 8px;
+    right: 18px;
+    width: 305px;
+    height: 305px;
+    object-fit: contain;
+    z-index: 0;
+    pointer-events: none;
+}
+
+h1 {
+    position: absolute;
+    top: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin: 0;
+    font-family: "Inspiration", cursive;
+    font-size: 96px;
+    font-weight: 400;
+    
+    line-height: 1;
+    color: #36261F;
+    z-index: 3;
+    white-space: nowrap;
+}
+
+#cup {
+    position: absolute;
+    top: 255px;
+    left: 220px;
+    width: 296px;
+    height: 310px;
+    object-fit: contain;
+    z-index: 2;
+}
+
+#receipt {
+    position: absolute;
+    top: 255px;
+    left: 610px;
+    width: 327px;
+    height: 183px;
+    
+    background: #FBF4E9;
+    border: 2px solid #764F34;
+    border-radius: 20px;
+
+    box-shadow: 0 6px 10px rgba(54, 38, 31, 0.18);
+    padding: 18px 24px 20px 24px;
+    z-index: 3;
+}
+
+.receipt-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Intel One Mono", monospace;
+    font-size: 12px;
+    color: #36261F;
+
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+}
+
+.receipt-line {
+    width: 100%;
+    height: 2px;
+    background: #764F34;
+    margin-bottom: 20px;
+}
+
+.receipt-note {
+    margin: 0;
+    font-family: "Inria Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #452816;
+    line-height: 1.4;
+}
+
+
+#emoji {
+    position: absolute;
+    left: 715px;
+    top: 455px;
+    width: 118px;
+    height: 118px;
+    object-fit: contain;
+    z-index: 3;
+    filter: drop-shadow(0 6px 8px rgba(54, 38, 31, 0.18));
+}
+
+#definition {
+    position: absolute;
+    left: 55px;
+    top: 618px;
+    z-index: 3;
+}
+
+#definition p {
+    margin: 0;
+    font-family: "Inria Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #452816;
+}
+
+#timeline-wrap {
+    position: absolute;
+    left: 56px;
+    bottom: 20px;
+    width: 1090px;
+
+    z-index: 4;
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    right: 15px;
+    height: 5px;
+
+    background: #36261F;
+    z-index: 0;
+    border-radius: 999px;
+}
+
+.timeline input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.timeline label {
+    position: relative;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+    z-index: 2;
+}
+
+.timeline .dot {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 4px solid #36261F;
+
+    border-radius: 50%;
+    background: #EFE3DA;
+    transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.timeline label:hover .dot {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 5px rgba(54, 38, 31, 0.08);
+
+}
+
+.timeline .dot::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #36261F;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.18s ease; 
+}
+
+#t8am:checked + label .dot::after,
+#t9am:checked + label .dot::after,
+#t10am:checked + label .dot::after,
+#t11am:checked + label .dot::after,
+#t12pm:checked + label .dot::after,
+#t1pm:checked + label .dot::after,
+#t2pm:checked + label .dot::after,
+#t3pm:checked + label .dot::after,
+#t4pm:checked + label .dot::after,
+#t5pm:checked + label .dot::after,
+#t6pm:checked + label .dot::after,
+#t7pm:checked + label .dot::after,
+#t8pm:checked + label .dot::after,
+#t9pm:checked + label .dot::after,
+#t10pm:checked + label .dot::after,
+#t11pm:checked + label .dot::after {
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+.time {
+    margin-top: 10px;
+    font-family: "Instrument Serif", serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #452816;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+
+
+
+
+

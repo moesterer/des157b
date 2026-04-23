@@ -1,0 +1,98 @@
+[
+  {
+    "time": "8:00 AM",
+    "hour": 8,
+    "craving": 5,
+    "note": "I wake up, ugh the sun is too bright"
+  },
+  {
+    "time": "9:00 AM",
+    "hour": 9,
+    "craving": 7,
+    "note": "nothing to note"
+  },
+  {
+    "time": "10:00 AM",
+    "hour": 10,
+    "craving": 10,
+    "note": "Made and drank 1 cup coffee"
+  },
+  {
+    "time": "11:00 AM",
+    "hour": 11,
+    "craving": 0,
+    "note": "nothing to note"
+  },
+  {
+    "time": "12:00 PM",
+    "hour": 12,
+    "craving": 2,
+    "note": "nothing to note"
+  },
+  {
+    "time": "1:00 PM",
+    "hour": 13,
+    "craving": 2,
+    "note": "nothing to note"
+  },
+  {
+    "time": "2:00 PM",
+    "hour": 14,
+    "craving": 3,
+    "note": "nothing to note"
+  },
+  {
+    "time": "3:00 PM",
+    "hour": 15,
+    "craving": 8,
+    "note": "Middle of class is peak sleepy time"
+  },
+  {
+    "time": "4:00 PM",
+    "hour": 16,
+    "craving": 7,
+    "note": "Brewed and drank 1 cup of tea"
+  },
+  {
+    "time": "5:00 PM",
+    "hour": 17,
+    "craving": 3,
+    "note": "nothing to note"
+  },
+  {
+    "time": "6:00 PM",
+    "hour": 18,
+    "craving": 2,
+    "note": "nothing to note"
+  },
+  {
+    "time": "7:00 PM",
+    "hour": 19,
+    "craving": 0,
+    "note": "nothing to note"
+  },
+  {
+    "time": "8:00 PM",
+    "hour": 20,
+    "craving": 0,
+    "note": "nothing to note"
+  },
+  {
+    "time": "9:00 PM",
+    "hour": 21,
+    "craving": 0,
+    "note": "nothing to note"
+  },
+  {
+    "time": "10:00 PM",
+    "hour": 22,
+    "craving": 0,
+    "note": "nothing to note"
+  },
+  {
+    "time": "11:00 PM",
+    "hour": 23,
+    "craving": 0,
+    "note": "Time for bed, hopefully the caffeine will let me close my eyes"
+  }
+]
