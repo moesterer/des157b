@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Inria+Sans:wght@300;400;700&family=Instrument+Serif:ital@0;1&family=Intel+One+Mono:wght@400&display=swap" rel="stylesheet">
 
+
     <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
 
 </head>
 <body>
@@ -21,18 +23,23 @@
 
         <h1>Caffeine Cravings</h1>
 
-        <img src="images/cup.png" alt="Coffee cup" id="cup">
-
-        <section id="receipt">
-            <div class="receipt-top">
-                <span>RECEIPT</span>
-                <span>COHO</span>
+        <section id="data-display">
+            <div id="cup-wrap">
+                <div id="coffee-fill"></div>
+                <img src="images/cup.png" alt="Coffee cup" id="cup">
             </div>
-            <div class="receipt-line"></div>
-            <p class="receipt-note">Wake up time!</p>
+        
+            <section id="receipt">
+                <div class="receipt-top">
+                    <span>RECEIPT</span>
+                    <span>COHO</span>
+                </div>
+                <div class="receipt-line"></div>
+                <p class="receipt-note">Wake up time!</p>
+            </section>
+        
+            <img src="images/emoji4.png" alt="Mood emoji" id="emoji">
         </section>
-
-        <img src="images/emoji4.png" alt="Mood emoji" id="emoji">
 
         <div id="definition">
             <p>Coffee<br>(n.) A legal drug</p>
