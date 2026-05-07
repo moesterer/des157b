@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Oracle</title>
+
+    <!-- N=normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
+
+    <!-- Atropos CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/atropos@2/atropos.min.css">
+
+    <!-- my CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- particles lib -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+
+    <!-- Atropos lib -->
+    <script src="https://cdn.jsdelivr.net/npm/atropos@2/atropos.min.js" defer></script>
+
+    <!-- My JS -->
+    <script src="script.js" defer></script> 
+
+</head>
+
+<body>
+    <main id="page">
+        <div id="particles-js"></div>
+        
+
+        <!-- Title -->
+        <section id="title-area">
+            <h1 id="digital">DIGITAL</h1>
+            <img id="eye" src="images/eye.png" alt="Eye symbol">
+            <h1 id="oracle">ORACLE</h1>
+        </section> 
+
+        <!-- buttons -->
+        <section id="menu-area">
+            <p id="waiting-text">The machine is waiting...</p>
+
+            <div class="menu-row">
+                <span class="button-label">Love</span>
+                <button class="oracle-button" data-category="love" aria-label="Love fortune">
+                    <img src="images/love.png" alt="">
+                </button>
+            </div>
+
+            <div class="menu-row">
+                <span class="button-label">Luck</span>
+                <button class="oracle-button" data-category="luck" aria-label="Luck fortune">
+                    <img src="images/luck.png" alt="">
+                </button>
+            </div>
+
+            <div class="menu-row">
+                <span class="button-label">Friendship</span>
+                <button class="oracle-button" data-category="friendship" aria-label="Friendship fortune">
+                    <img src="images/friendship.png" alt="">
+                </button>
+            </div> 
+
+            <div class="menu-row">
+                <span class="button-label">Money</span>
+                <button class="oracle-button" data-category="money" aria-label="Money fortune">
+                    <img src="images/money.png" alt="">
+                </button>
+            </div>
+
+            <div class="menu-row">
+                <span class="button-label">Chaos</span>
+                <button class="oracle-button" data-category="chaos" aria-label="Chaos fortune">
+                    <img src="images/chaos.png" alt="">
+                </button>
+            
+            </div>
+        </section>
+
+
+        <!-- stage and ball -->
+        <section id="oracle-scene">
+            <img id="stage" src="images/stage.png" alt="Stage">
+
+            <div id="crystal-area">
+                <img id="stand" src="images/stand.png" alt="Crystal ball stand">
+
+                <div id="ball-parallax" class="atropos ball-atropos">
+                    <div class="atropos-scale">
+
+                        <div class="atropos-rotate">
+                            <div class="atropos-inner">
+
+                                <img id="ball" src="images/ball.png" alt="Crystal ball" data-atropos-offset="2">
+                                <img id="sparkles" src="images/sparkles.png" alt="Sparkles" data-atropos-offset="6">
+                            
+                                <p id="fortune-text" data-atropos-offset="8">
+                                    Choose a symbol to receive your fortune.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <footer id="library-footer">
+            <p>
+                Libraries used:
+                <a href="https://vincentgarreau.com/particles.js/" target="_blank">particles.js</a>
+                and
+                <a href="https://atroposjs.com/" target="_blank">Atropos</a>
+            </p>
+        </footer>
+
+    </main>
+</body>
+</html>
+
+
+

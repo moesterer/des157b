@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #562258;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F5B661;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    position: relative;
+
+}
+
+#page {
+    position: relative;
+    width: min(100vw, calc(100vh * 1.6));
+    aspect-ratio: 1200 / 750;
+    overflow: hidden;
+    background: transparent;
+
+    z-index: 1;
+}
+
+/* Title */
+
+#title-area {
+    position: absolute;
+    top: 3.7%;
+    left: 50%;
+    width: 30%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    z-index: 5;
+}
+
+#title-area h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    line-height: 0.95;
+    
+    letter-spacing: 4px;
+    color: #F5B661;
+    font-weight: 400;
+}
+
+#digital {
+    margin-bottom: 8px; 
+}
+
+#eye {
+    display: block;
+    width: 150px;
+    margin: 8px auto 6px auto;
+}
+
+#oracle {
+    margin-top: 6px;
+}
+
+/* Buttons */
+
+#menu-area {
+    position: absolute;
+    left: 4.17%;
+    top: 24%;
+    width: 20%;
+    z-index: 10;
+}
+
+#waiting-text {
+    margin: 0 0 18px 0;
+    font-size: 15px;
+    color: #F5B661;
+    line-height: 1.2;
+}
+
+.menu-row {
+    display: flex;
+    align-items: center; 
+
+    justify-content: flex-end;
+    gap: 13px;
+    margin-bottom: 12px;
+}
+
+.button-label {
+    width: 150px;
+    text-align: right;
+    font-size: 15px;
+    color: #F5B661;
+    line-height: 1;
+}
+
+.oracle-button {
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    border-radius: 50%;
+}
+
+.oracle-button img {
+    width: 100%;
+    height: 100%;
+    display: block;
+} 
+
+
+.oracle-button:hover {
+    transform: scale(1.08);
+}
+
+.oracle-button:active {
+    transform: scale(0.96);
+}
+
+.oracle-button.selected {
+    filter: brightness(1.18);
+}
+
+/* Stage , ball is placed relative to stage*/
+
+
+#oracle-scene {
+    position: absolute;
+    left: 22.5%;
+    top: 29.73%;
+    width: 56.67%;
+    z-index: 1;
+} 
+
+#stage {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+/* Crystal ball */
+
+#crystal-area {
+    position: absolute;
+    left: 33.8%;
+    top: 26%;
+    width: 32.35%;
+    aspect-ratio: 220 / 230;
+
+    z-index: 3;
+}
+
+/* Stand is separate and fixed */
+#stand {
+    position: absolute;
+    left: 6.8%;
+    top: 66.5%;
+    width: 86.4%;
+
+    z-index: 1;
+}
+
+/* parallax wrapper for only ball + sparkles + text */
+#ball-parallax {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+/* Atropos sizing */
+.ball-atropos,
+.ball-atropos .atropos-scale,
+.ball-atropos .atropos-rotate,
+.ball-atropos .atropos-inner {
+    width: 100%; 
+    height: 100%;
+}
+
+.ball-atropos .atropos-inner {
+    position: relative;
+    overflow: visible;
+}
+
+/*remove default shadow and highlight*/
+.ball-atropos .atropos-shadow {
+    display: none;
+}
+
+.ball-atropos .atropos-highlight {
+    display: none;
+}
+
+
+#ball {
+    position: absolute;
+    left: 3.2%;
+    top: -8.7%;
+
+    width: 93.2%;
+    z-index: 2;
+}
+
+#sparkles {
+    position: absolute;
+    left: 14.5%;
+    top: 2.2%;
+    width: 70.5%;
+    z-index: 3;
+    pointer-events: none;
+
+} 
+
+#fortune-text {
+    position: absolute;
+    left: 20.5%;
+    top: 19.6%;
+    width: 59%;
+    margin: 0;
+    z-index: 4;
+
+    color: #08124D;
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* particles for bkroung */
+
+#particles-js {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 0;
+    pointer-events: none; 
+}
+
+
+/* footer info */
+
+#library-footer {
+    position: absolute;
+    left: 0;
+    bottom: 1.5%;
+    width: 100%;
+    z-index: 20;
+    text-align: center;
+}
+
+#library-footer p {
+    margin: 0;
+    font-size: 10px;
+    color: #F5B661;
+    line-height: 1.4;
+}
+
+#library-footer a {
+    color: #F5B661;
+    text-decoration: underline;
+}
+
+#library-footer a:hover {
+    color: #ffffff;
+}
+
