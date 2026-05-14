@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparative Analysis</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #f4f1ec;
+            color: #1f1f1f;
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 70px 24px 45px;
+            text-align: center;
+            background: #171717;
+            color: #f7f3ec;
+        }
+
+        header h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2.4rem, 6vw, 5rem);
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        header p {
+            max-width: 680px;
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            color: #d7d0c4;
+        }
+
+        main {
+            width: min(1120px, calc(100% - 36px));
+            margin: 45px auto 70px;
+        }
+
+        .project-card {
+            display: grid;
+            grid-template-columns: minmax(280px, 1fr) minmax(300px, 0.95fr);
+            gap: 34px;
+            align-items: start;
+            margin-bottom: 42px;
+            padding: 28px;
+            background: #ffffff;
+            border: 1px solid #ded8cf;
+            border-radius: 22px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-card h2 {
+            margin: 0 0 10px;
+            font-size: clamp(1.7rem, 3vw, 2.7rem);
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+        }
+
+        .project-card a {
+            color: #6b2f1a;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+        }
+
+        .project-card a:hover {
+            color: #111111;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        .image-grid.two-images {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        figure {
+            margin: 0;
+        }
+
+        figure img {
+            display: block;
+            width: 100%;
+            height: 315px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid #cac2b7;
+            background: #ddd6cc;
+        }
+
+        figcaption {
+            margin-top: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.82rem;
+            color: #6a6259;
+        }
+
+        .analysis-text {
+            max-width: 62ch;
+        }
+
+        .label {
+            display: inline-block;
+            margin-bottom: 16px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: #eee7dd;
+            color: #4a4038;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .analysis-text p {
+            margin: 0 0 16px;
+            font-size: 1.05rem;
+        }
+
+        .add-more {
+            padding: 26px;
+            border: 2px dashed #bdb4a8;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.55);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .add-more h2 {
+            margin: 0 0 8px;
+            font-size: 1.3rem;
+        }
+
+        .add-more p {
+            max-width: 70ch;
+            margin: 0;
+            color: #4b4742;
+        }
+
+        footer {
+            padding: 25px 20px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.85rem;
+            color: #6a6259;
+        }
+
+        @media (max-width: 850px) {
+            .project-card {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .image-grid.two-images {
+                grid-template-columns: 1fr;
+            }
+
+            figure img {
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Comparative Analysis</h1>
+
+    </header>
+
+    <main>
+        <section class="project-card">
+            <div class="image-grid">
+                <figure>
+                    <img src="images/boat.png" alt="Screen capture from The Boat showing a dark ocean scene with a small boat and layered illustrated panels.">
+                    <figcaption>Screen capture from <em>The Boat</em>.</figcaption>
+                </figure>
+            </div>
+
+            <div class="analysis-text">
+                <h2>The Boat</h2>
+                <p><a href="https://theanimatedweb.com/inspiration/the-boat/" target="_blank">Visit the original project</a></p>
+
+                <p>
+                    The main element I want to take away from this project is how they make the story dynamic and animated through animate on scroll. Things in the background, like the boat, are slowly moving across the page much slower than the main content that is brighter in the front. Together they create a more immersive experience.
+                </p>
+
+                <p>
+                    The interface design is strong because it uses contrast, layering, and scale to guide the viewer through the story without relying only on blocks of text. The interaction design makes the act of scrolling feel connected to the story because the user is not just moving down a page, but moving through a shifting scene. One thing to be careful of is that sometimes they have so much going on to the point that it is distracting, but I want to take the movement and tone through highlighting, movement, and color that this designer created into my project, specifically the first part with newspapers, perhaps with a slow political upheaval or protest happening in the background.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-card">
+            <div class="image-grid two-images">
+                <figure>
+                    <img src="images/room.png" alt="Screen capture from missed messages showing an illustrated room interface.">
+                    <figcaption>Room screen capture from <em>missed messages</em>.</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/snow.png" alt="Screen capture from missed messages showing an illustrated snow scene.">
+                    <figcaption>Snow screen capture from <em>missed messages</em>.</figcaption>
+                </figure>
+            </div>
+
+            <div class="analysis-text">
+                <h2>missed messages</h2>
+                <p><a href="https://zephyo.itch.io/missed-message" target="_blank">Visit the original project</a></p>
+
+                <p>
+                    This is a game that is playable in the web browser once downloaded. I want to use a similar format for the main part of my project. The box at the bottom with the player’s thoughts and the scene around that with hoverable and intractable objects is the same type of visual format I want to use.
+                </p>
+
+                <p>
+                    The interface design works well because the scene, dialogue box, and clickable objects all feel like parts of one emotional environment rather than separate pieces. The interaction design is simple enough that the player can understand what to do quickly, but the hoverable and interactive areas still make the scene feel exploratory. However, the art style is different than I want and I don’t like that the mouse moving makes the scene picture move as well, mine would be more static except for zooming into a specific part of the screen.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
