@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    color: #161E22;
+    overflow-x: hidden;
+
+    background-image: url("images/bkgIntro.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 100%;
+    background-attachment: scroll;
+}
+
+/* Intro page */
+
+#intro {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    background: transparent;
+}
+
+#intro h1 {
+    margin: 0;
+    font-family: "Licorice", cursive;
+    font-size: 200px;
+    font-weight: 400;
+    color: #161E22;
+    line-height: 1;
+}
+
+#start-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    font-family: "Licorice", cursive;
+    font-size: 30px;
+    color: #161E22;
+}
+
+#start-btn:hover {
+    opacity: 0.65;
+}
+
+/* Timeline */
+
+#timeline {
+    width: 100%;
+    background: transparent;
+}
+
+.news-section {
+    width: 100%;
+    min-height: 180vh;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 35vh;
+    padding-bottom: 35vh;
+    overflow: hidden;
+
+    background: transparent;
+}
+
+.first-news { 
+    background: transparent;
+}
+
+.news-img {
+    width: 800px;
+    max-width: 70vw;
+    height: auto;
+    position: relative;
+    z-index: 5;
+
+    filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.18));
+}
+
+/* Large animated years */
+
+
+.year {
+    position: absolute;
+    top: 24vh;
+
+    font-family: "Lora", serif;
+    font-size: 128px;
+    font-weight: 500;
+    line-height: 1;
+
+    z-index: 4;
+}
+
+.year-left {
+    left: 12%;
+    color: #161E22;
+}
+
+.year-right {
+    right: 12%;
+    color: #161E22;
+
+}
+
+.dark-year {
+    color: #161E22;
+}
+
+.light-year {
+    color: #FFFCF7;
+}
+
+/* background images */
+
+.with-bkg {
+    position: relative;
+}
+
+.bkg-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+
+/* Ending of intro*/
+
+#ending {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #FFFCF7;
+    background: transparent;
+}
+
+#ending h2 {
+    margin: 0;
+    font-family: "Lora", serif;
+    font-size: 96px;
+    font-weight: 400;
+}
+
+
+
+
+@media (max-width: 900px) {
+    #intro h1 {
+        font-size: 120px;
+    }
+
+    .year {
+        font-size: 80px;
+    }
+
+    .news-img {
+        width: 480px;
+        max-width: 80vw;
+    }
+
+    #ending h2 {
+        font-size: 56px;
+    }
+}
+
+
+
