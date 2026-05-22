@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+    <style>
+        html {
+            background-color: #efefef;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333;
+            line-height: 1.4em;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+    <body>
+        <h1>Arrow Functions</h1>
+
+        <p>This function takes a mood as a string and then returns a fortune based on that mood or button chosen from my previous project. I just came up with it as it connects to the library liberty project with a fortune machine style example, so it was easy to convert into different function formats.</p>
+
+        <h2>Named Function</h2>
+        <code>
+            <pre>
+                function getFortune(mood) {
+                    return `Your ${mood} fortune is: something strange is coming your way.`; 
+                }
+
+                console.log(getFortune("luck"));
+            </pre>
+        </code>
+
+        <h2>Function Expression</h2>
+        <code>
+            <pre>
+                const getFortune = function(mood) {
+                    return `Your ${mood} fortune is: something strange is coming your way.`;
+                };
+            
+                console.log(getFortune("luck"));
+            </pre> 
+        </code>
+
+        <h2>Arrow Function</h2>
+        <code>
+            <pre>
+                const getFortune = mood => `Your ${mood} fortune is: something strange is coming your way.`;
+                        
+                console.log(getFortune("luck"));
+            </pre>
+        </code>
+
+        <footer> Madeleine Oesterer </footer>
+
+    </body>
+</html>
+
