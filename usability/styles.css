@@ -893,15 +893,23 @@ body.lock-scroll {
     overflow: hidden;
 }
 
-#phone-background {
+#phone-background,
+#app-text-gif {
     position: absolute;
     inset: 0;
 
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
 
+#phone-background {
     z-index: 1;
+}
+
+#app-text-gif {
+    z-index: 2;
+    pointer-events: none;
 }
 
 #phone-map {
