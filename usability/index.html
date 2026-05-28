@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longevity</title>
+
+    <!-- Normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Licorice&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="intro-overlay">
+        <div id="overlay-panel">
+            <button id="close-overlay" aria-label="Close overlay">×</button>
+        
+            <div id="overlay-text">
+                <p>
+                    You are about to explore an interactive narrative website called
+                    <em>Longevity</em>. Move through the project as if you are a first-time
+                    visitor. Pay attention to what feels clickable, what feels confusing,
+                    and how the story makes you feel. You do not need to “win” or complete
+                    the experience perfectly. The goal is to understand whether the
+                    interaction, pacing, and story are clear.
+                </p>
+            
+                <p>
+                    As you go through the experience, think aloud if possible. Say what you
+                    notice, what you expect to happen next, and where you feel unsure.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="story-page">
+
+        <section id="intro">
+            <h1>longevity</h1>
+            <button id="start-btn">click to start</button>
+        </section>
+
+        <main id="timeline">
+
+            <section class="news-section first-news">
+                <div 
+                    class="year year-left" 
+                    data-aos="fade-right" 
+                    data-aos-anchor-placement="center-bottom"
+                >
+                    2012
+                </div>
+
+                <img 
+                    src="images/news2012.png" 
+                    alt="Newspaper article from 2012" 
+                    class="news-img"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom"
+                >
+            </section>
+
+            <section class="news-section with-bkg">
+                <img 
+                    src="images/bkg2026.png" 
+                    alt="" 
+                    class="bkg-img move-left"
+                >
+                    
+                <div 
+                    class="year year-right" 
+                    data-aos="fade-left" 
+                    data-aos-anchor-placement="center-bottom"
+                >
+                    2026
+                </div>
+            
+                <img 
+                    src="images/news2026.png" 
+                    alt="Newspaper article from 2026" 
+                    class="news-img"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom"
+                >
+            </section>
+            
+            <section class="news-section">
+                <div 
+                    class="year year-left dark-year" 
+                    data-aos="fade-right" 
+                    data-aos-anchor-placement="center-bottom"
+                >
+                    2036
+                </div>
+            
+                <img 
+                    src="images/news2036.png" 
+                    alt="Newspaper article from 2036" 
+                    class="news-img"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom"
+                >
+            </section>
+
+            <section class="news-section with-bkg">
+                <img 
+                    src="images/bkg2051.png" 
+                    alt="" 
+                    class="bkg-img move-right"
+                >
+
+                <div 
+                    class="year year-right light-year" 
+                    data-aos="fade-left" 
+                    data-aos-anchor-placement="center-bottom"
+                >
+                    2051
+                </div>
+
+                <img 
+                    src="images/news2051.png" 
+                    alt="Newspaper article from 2051" 
+                    class="news-img"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom"
+                >
+            </section>
+
+            <section class="news-section">
+                <div 
+                    class="year year-left light-year" 
+                    data-aos="fade-right" 
+                    data-aos-anchor-placement="center-bottom"
+                >
+                    2073
+                </div>
+
+                <img 
+                    src="images/news2073.png" 
+                    alt="Newspaper article from 2073" 
+                    class="news-img"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom"
+                >
+            </section>
+
+            <section class="news-section with-bkg final-news">
+                <img 
+                    src="images/bkg2129.png" 
+                    alt="" 
+                    class="bkg-img move-left"
+                >
+
+                <div 
+                    class="year year-right light-year" 
+                    data-aos="fade-left" 
+                    data-aos-anchor-placement="center-bottom"
+                >
+                    2129
+                </div>
+
+                <img 
+                    src="images/news2129.png" 
+                    alt="Newspaper article from 2129" 
+                    class="news-img"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="center-bottom"
+                >
+            </section>
+
+            <section id="ending">
+                <h2 
+                    data-aos="fade-up" 
+                    data-aos-anchor-placement="center-bottom"
+                >
+                    Today is May 19, 2129
+                </h2>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Scene transition text -->
+    <div id="transition-layer">
+        <h2 id="today-text">Today is May 19, 2129</h2>
+        <h2 id="unity-text"></h2>
+    </div>
+
+    <!-- Kitchen scene -->
+    <section id="kitchen-scene">
+        <div id="kitchen-stage">
+
+            <img src="images/kitchen.jpg" alt="Kitchen scene" id="kitchen-img">
+
+            <svg id="kitchen-map" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid slice">
+
+                <polygon 
+                    id="picture-hotspot"
+                    class="hotspot"
+                    data-object="picture"
+                    points="162.5,209.5 293,208.5 290,46.5 161.5,46.5"
+                ></polygon>
+
+                <polygon 
+                    id="calendar-hotspot"
+                    class="hotspot"
+                    data-object="calendar"
+                    points="225.5,712 278.5,744.5 454,725.5 430,539 259,550"
+                ></polygon>
+
+                <image
+                    id="picture-alert"
+                    class="alert-icon"
+                    href="images/exclamation.png"
+                    x="130"
+                    y="25"
+                    width="125"
+                    height="125"
+                ></image>
+
+                <image
+                    id="calendar-alert"
+                    class="alert-icon"
+                    href="images/exclamation.png"
+                    x="350"
+                    y="430"
+                    width="135"
+                    height="135"
+                ></image>
+
+            </svg>
+
+            <button id="next-scene-btn">Catch the bus</button>
+
+        </div>
+    </section>
+
+    <!-- Bus scene -->
+    <section id="bus-scene">
+        <div id="bus-stage">
+
+            <img src="images/bus.jpg" alt="Bus scene" id="bus-img">
+
+            <svg id="bus-map" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid slice">
+
+                <polygon 
+                    id="girls-hotspot"
+                    class="bus-hotspot"
+                    data-object="girls"
+                    points="28,734 52.5,514 80,395 219,389 246.5,471.5 238,556 257,588 294,560.5 331.5,592 338.5,636.5 363,597.5 353.5,523.5 368.5,436.5 422.5,407 490.5,413 532.5,439.5 562.5,466 574,548.5 579.5,632.5 566.5,691.5 552,741.5 271,740.5"
+                ></polygon>
+
+                <polygon 
+                    id="magazine-hotspot"
+                    class="bus-hotspot"
+                    data-object="magazine"
+                    points="620.5,746 609,704.5 721.5,683.5 753,747"
+                ></polygon>
+
+                <image
+                    id="girls-alert"
+                    class="bus-alert-icon"
+                    href="images/exclamation.png"
+                    x="440"
+                    y="365"
+                    width="130"
+                    height="130"
+                ></image>
+
+                <image
+                    id="magazine-alert"
+                    class="bus-alert-icon"
+                    href="images/exclamation.png"
+                    x="660"
+                    y="575"
+                    width="125"
+                    height="125"
+                ></image>
+
+            </svg>
+
+            <button id="bus-next-scene-btn">Disembark for the speech viewing</button>
+
+        </div>
+
+        <button id="close-bus-convo">×</button>
+
+        <svg id="girls-conversation" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid slice">
+
+            <image
+                href="images/girl1.png"
+                class="speech-bubble-svg"
+                x="85"
+                y="125"
+                width="470"
+                height="260"
+            ></image>
+
+            <foreignObject x="128" y="170" width="335" height="150">
+                <p id="girl-one-text"></p>
+            </foreignObject>
+        
+            <image
+                href="images/girl2.png"
+                class="speech-bubble-svg"
+                x="550"
+                y="265"
+                width="450"
+                height="240"
+            ></image>
+        
+            <foreignObject x="610" y="312" width="315" height="120">
+                <p id="girl-two-text"></p>
+            </foreignObject>
+        
+            <foreignObject x="845" y="400" width="150" height="40">
+                <button id="continue-girls">Click to continue</button>
+            </foreignObject>
+        
+        </svg>
+    </section>
+
+    <section id="object-scene">
+        <button id="close-object">×</button>
+
+        <img src="images/calendar.png" alt="" id="object-image">
+
+        <div id="dialogue-box">
+            <p id="dialogue-text"></p>
+            <button id="continue-text">Click to continue</button>
+        </div>
+    </section>
+
+    <!-- Speech viewing scene -->
+    <section id="speech-scene">
+        <div id="speech-stage">
+            <img src="images/speech.gif" alt="President speech viewing" id="speech-background">
+
+            <img src="images/smile.gif" alt="" id="speech-flash-smile" class="speech-flash">
+            <img src="images/liar.gif" alt="" id="speech-flash-liar" class="speech-flash">
+            <img src="images/orange.gif" alt="" id="speech-flash-orange" class="speech-flash">
+
+            <div id="ding-text">*ding</div>
+
+            <div id="speech-box">
+                <p id="speech-text"></p>
+                <button id="continue-speech">Click to continue</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phone deposit scene -->
+    <section id="phone-scene">
+        <div id="phone-stage">
+            <img src="images/phone.jpg" alt="Phone deposit reminder" id="phone-background">
+
+
+            <svg id="phone-map" viewBox="0 0 2400 1500" preserveAspectRatio="xMidYMid slice">
+                <polygon 
+                    id="deposit-hotspot"
+                    class="phone-hotspot"
+                    points="1043,996 988,970 977,903 1005,856 1064,845 1291,850 1334,871 1355,911 1344,972 1300,1004"
+                ></polygon>
+
+                <image
+                    id="deposit-alert"
+                    class="phone-alert-icon"
+                    href="images/exclamation.png"
+                    x="1280"
+                    y="785"
+                    width="160"
+                    height="160"
+                ></image>
+                
+            </svg>
+        </div>
+    </section>
+
+
+    <!-- Final ending scene -->
+    <section id="final-scene">
+        <div id="final-stage">
+            <h1 id="final-title">longevity</h1>
+            <h2 id="final-question"></h2>
+        </div>
+    </section>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

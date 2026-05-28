@@ -1,0 +1,1134 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: #161E22;
+    overflow-x: hidden;
+
+    background-image: url("images/bkgIntro.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 100%;
+    background-attachment: scroll;
+}
+
+body.lock-scroll {
+    overflow: hidden;
+}
+
+/* Intro page */
+
+#story-page {
+    transition: opacity 2s ease;
+}
+
+#story-page.fade-away {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#intro {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    background: transparent;
+}
+
+#intro h1 {
+    margin: 0;
+    font-family: "Lobster Two", sans-serif;
+    font-size: 200px;
+    font-weight: 400;
+    font-style: normal;
+    color: #161E22;
+    line-height: 1;
+}
+
+#start-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    font-family: "Licorice", cursive;
+    font-size: 30px;
+    color: #161E22;
+}
+
+#start-btn:hover {
+    opacity: 0.65;
+}
+
+/* Timeline */
+
+#timeline {
+    width: 100%;
+    background: transparent;
+}
+
+.news-section {
+    width: 100%;
+    min-height: 180vh;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 35vh;
+    padding-bottom: 35vh;
+    overflow: hidden;
+
+    background: transparent;
+}
+
+.first-news { 
+    background: transparent;
+}
+
+.news-img {
+    width: 800px;
+    max-width: 70vw;
+    height: auto;
+    position: relative;
+    z-index: 5;
+
+    filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.18));
+}
+
+/* Large animated years */
+
+.year {
+    position: absolute;
+    top: 24vh;
+
+    font-family: "Lora", serif;
+    font-size: 128px;
+    font-weight: 500;
+    line-height: 1;
+
+    z-index: 4;
+}
+
+.year-left {
+    left: 12%;
+    color: #161E22;
+}
+
+.year-right {
+    right: 12%;
+    color: #161E22;
+}
+
+.dark-year {
+    color: #161E22;
+}
+
+.light-year {
+    color: #FFFCF7;
+}
+
+/* background images */
+
+.with-bkg {
+    position: relative;
+}
+
+.bkg-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+/* Ending of intro */
+
+#ending {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #FFFCF7;
+    background: transparent;
+}
+
+#ending h2 {
+    margin: 0;
+    font-family: "Lora", serif;
+    font-size: 96px;
+    font-weight: 400;
+    text-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+}
+
+/* Transition layer */
+
+#transition-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    pointer-events: none;
+    opacity: 0;
+}
+
+#transition-layer.show {
+    opacity: 1;
+}
+
+#transition-layer h2 {
+    position: absolute;
+    margin: 0;
+
+    font-family: "Lora", serif;
+    font-size: 96px;
+    font-weight: 400;
+    color: #FFFCF7;
+    text-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+}
+
+#today-text {
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+#today-text.fade-out {
+    opacity: 0;
+}
+
+#unity-text {
+    opacity: 0;
+}
+
+#unity-text.show {
+    opacity: 1;
+}
+
+.typed-cursor {
+    font-family: "Lora", serif;
+    font-size: 96px;
+    color: #FFFCF7;
+    text-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+}
+
+/* Kitchen scene */
+
+#kitchen-scene {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+
+    background: #8890B7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease;
+}
+
+#kitchen-scene.show {
+    opacity: 1;
+}
+
+#kitchen-scene.active {
+    pointer-events: initial;
+}
+
+#kitchen-stage {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+#kitchen-img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#kitchen-map {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* Use slice so the SVG map scales the same way as object-fit: cover */
+
+.hotspot {
+    fill: transparent;
+    stroke: transparent;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+#kitchen-scene.active .hotspot {
+    pointer-events: initial;
+}
+
+/* Exclamation indicators */
+
+.alert-icon {
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+
+    transform-box: fill-box;
+    transform-origin: center;
+
+    animation-name: floatAlert;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#kitchen-scene.active .alert-icon {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+
+
+.alert-icon.hide {
+    display: none;
+}
+
+.alert-icon.vibrate {
+    animation: vibrateAlert 0.4s ease-in-out infinite;
+}
+
+@keyframes floatAlert {
+    0% {
+        transform: translateY(0) rotate(7.5deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(7.5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(7.5deg);
+    }
+}
+
+@keyframes vibrateAlert {
+    0% {
+        transform: translateX(0) rotate(7.5deg);
+    }
+
+    25% {
+        transform: translateX(-3px) rotate(4deg);
+    }
+
+    50% {
+        transform: translateX(3px) rotate(11deg);
+    }
+
+    75% {
+        transform: translateX(-2px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(7.5deg);
+    }
+}
+
+/* Next scene button */
+
+#next-scene-btn {
+    position: absolute;
+    right: 110px;
+    bottom: 70px;
+    z-index: 8;
+
+    width: 320px;
+    height: 80px;
+
+    border: none;
+    border-radius: 12px;
+    background: #FDBF2C;
+    color: #0D0034;
+
+    font-family: "Lora", serif;
+    font-size: 30px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease, transform 0.3s ease;
+}
+
+#next-scene-btn.show {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+#next-scene-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Object detail scene */
+
+#object-scene {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+
+    background: #8890B7;
+
+    display: grid;
+
+    grid-template-rows: 66vh 34vh;
+    justify-items: center;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+}
+
+#object-scene.show {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+#close-object {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    z-index: 305;
+
+    border: none;
+    background: none;
+
+    color: #D9D9D9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+#object-image {
+    max-height: 62vh;
+    max-width: 88vw;
+    width: auto;
+    height: auto;
+
+    align-self: end;
+    margin-bottom: 10px;
+}
+
+#dialogue-box {
+    position: relative;
+
+    width: 660px;
+    max-width: 80vw;
+    min-height: 190px;
+
+    align-self: start;
+
+    background: #D9D9D9;
+    border-radius: 28px;
+
+    padding: 28px 32px 54px;
+    cursor: pointer;
+}
+
+#dialogue-box:hover #continue-text {
+    color: #0D0034;
+}
+
+#dialogue-text {
+    margin: 0;
+
+    font-family: "Lora", serif;
+    font-size: 22px;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.45;
+    color: #0D0034;
+}
+
+#continue-text {
+    position: absolute;
+    right: 28px;
+    bottom: 18px;
+
+    border: none;
+    background: none;
+
+    font-family: "Lora", serif;
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    color: #8890B7;
+
+    cursor: pointer;
+} 
+
+
+/* Bus scene */
+
+#bus-scene {
+    position: fixed;
+    inset: 0;
+    z-index: 120;
+
+    background: #8890B7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease;
+}
+
+#bus-scene.show {
+    opacity: 1;
+}
+
+#bus-scene.active {
+    pointer-events: initial;
+}
+
+#bus-stage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#bus-img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+#bus-map {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 5;
+    pointer-events: none;
+}
+
+.bus-hotspot {
+    fill: transparent;
+    stroke: transparent;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+#bus-scene.active .bus-hotspot {
+    pointer-events: initial;
+}
+
+.bus-alert-icon {
+    pointer-events: initial;
+    cursor: pointer;
+
+    transform-box: fill-box;
+    transform-origin: center;
+
+    animation-name: floatAlert;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.bus-alert-icon.hide {
+    display: none;
+}
+
+.bus-alert-icon.vibrate {
+    animation-name: vibrateAlert;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* Bus final button */
+
+#bus-next-scene-btn {
+    position: absolute;
+    right: 80px;
+    bottom: 60px;
+    z-index: 8;
+
+    width: 390px;
+    height: 100px;
+
+    border: none;
+    border-radius: 12px;
+    background: #FDBF2C;
+    color: #0D0034;
+
+    font-family: "Lora", serif;
+    font-size: 24px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease, transform 0.3s ease;
+}
+
+
+#bus-next-scene-btn.show {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+#bus-next-scene-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Girls conversation */
+
+#girls-conversation {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 20;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+}
+
+#girls-conversation.show {
+    opacity: 1;
+    pointer-events: initial;
+    cursor: pointer;
+}
+
+.speech-bubble-svg {
+    pointer-events: none;
+}
+
+#girl-one-text,
+#girl-two-text {
+    margin: 0;
+    color: #0D0034;
+
+    font-family: "Lora", serif;
+    font-size: 17px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.35;
+}
+
+#continue-girls {
+    border: none;
+    background: none;
+    padding: 10px 12px;
+
+    font-family: "Lora", serif;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    color: #8890B7;
+
+    cursor: pointer;
+}
+
+#close-bus-convo {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    z-index: 30;
+
+    width: 82px;
+    height: 82px;
+    padding: 0;
+
+    border: none;
+    background: #D9D9D9;
+    border-radius: 50%;
+
+    color: #0D0034;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 68px;
+    font-weight: 700;
+    line-height: 82px;
+    text-align: center;
+
+    cursor: pointer;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+#close-bus-convo.show {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+#close-bus-convo:hover {
+    background: #f5fdff;
+    border-color: #0D0034;
+}
+
+ 
+
+/* Speech viewing scene */
+
+#speech-scene {
+    position: fixed;
+    inset: 0;
+    z-index: 140;
+
+    background: #040033;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.2s ease;
+}
+
+#speech-scene.show {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+#speech-stage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#speech-background,
+.speech-flash {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#speech-background {
+    z-index: 1;
+}
+
+.speech-flash {
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.speech-flash.show {
+    opacity: 1;
+}
+
+#speech-box {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    width: 760px;
+    max-width: 70vw;
+    min-height: 165px;
+
+    background: #040033;
+    border-radius: 28px;
+    padding: 38px 40px 54px;
+
+    cursor: pointer;
+}
+
+#speech-box.hide {
+    display: none;
+}
+
+#speech-text {
+    margin: 0;
+
+    font-family: "Lora", serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.35;
+    color: #FDF9FF;
+}
+
+#continue-speech {
+    position: absolute;
+    right: 40px;
+    bottom: 24px;
+
+    border: none;
+    background: none;
+
+    font-family: "Lora", serif;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    color: #BCBCBC;
+
+    cursor: pointer;
+}
+
+#speech-box:hover #continue-speech {
+    color: #FDF9FF;
+}
+
+
+
+/* Smaller screens */
+
+@media (max-width: 900px) {
+    #intro h1 {
+        font-size: 120px;
+    }
+
+    .year {
+        font-size: 80px;
+    }
+
+    .news-img {
+        width: 480px;
+        max-width: 80vw;
+    }
+
+    #ending h2,
+    #transition-layer h2,
+    .typed-cursor {
+        font-size: 56px;
+    }
+
+    #dialogue-box {
+        width: 85vw;
+    }
+
+    #object-image {
+        max-width: 70vw;
+    }
+}
+/* Phone deposit scene */
+
+#phone-scene {
+    position: fixed;
+    inset: 0;
+    z-index: 150;
+
+    background: #000;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.4s ease;
+}
+
+#phone-scene.show {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+#phone-stage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#phone-background {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    z-index: 1;
+}
+
+#phone-map {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 5;
+    pointer-events: none;
+}
+
+.phone-hotspot {
+    fill: transparent;
+    stroke: transparent;
+    cursor: pointer;
+    pointer-events: none;
+}
+
+#phone-scene.active .phone-hotspot {
+    pointer-events: initial;
+}
+
+.phone-alert-icon {
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+
+    transform-box: fill-box;
+    transform-origin: center;
+
+    animation-name: floatAlert;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+} 
+
+#phone-scene.active .phone-alert-icon {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.phone-alert-icon.hide {
+    display: none;
+}
+
+.phone-alert-icon.vibrate {
+    animation: vibrateAlert 0.4s ease-in-out infinite;
+}
+
+/* Text sound effect after speech */
+
+#ding-text {
+    position: absolute;
+    right: 9vw;
+    bottom: 15vh;
+    z-index: 10;
+
+    margin: 0;
+
+    font-family: "Lora", serif;
+    font-size: 75px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1;
+    color: #E2E7FF;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+#ding-text.play {
+    animation: dingRise 2s ease-in-out forwards;
+}
+
+@keyframes dingRise {
+    0% {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-16px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-34px);
+    }
+}
+
+/* Final ending scene */
+
+#final-scene {
+    position: fixed;
+    inset: 0;
+    z-index: 500;
+
+    background: #000000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease;
+}
+
+#final-scene.show {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+#final-scene.fade-away {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#final-stage {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#final-title,
+#final-question {
+    margin: 0;
+    text-align: center;
+
+    font-family: "Lobster Two", sans-serif;
+    font-size: 150px;
+    font-weight: 400;
+    line-height: 1.1;
+
+    color: #990003;
+}
+
+#final-title {
+    font-size: 200px;
+}
+
+#final-question {
+    font-size: 150px;
+    opacity: 0;
+}
+
+#final-question.show {
+    opacity: 1;
+}
+
+
+/* Beginning overlay */
+
+#intro-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(150, 150, 150, 0.72);
+}
+
+#intro-overlay.hide {
+    display: none;
+}
+
+#overlay-panel {
+    position: relative;
+
+    width: 860px;
+    max-width: 78vw;
+    min-height: 360px;
+
+    background: #040033;
+    border-radius: 34px;
+
+    padding: 78px 48px 48px;
+}
+
+#close-overlay {
+    position: absolute;
+    top: 22px;
+    right: 28px;
+
+    border: none;
+    background: none;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1;
+
+    color: #FDF9FF;
+    cursor: pointer;
+}
+
+#overlay-text p {
+    margin: 0 0 28px 0;
+
+    font-family: "Lora", serif;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.45;
+    color: #FDF9FF;
+}
+
+
+#overlay-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+
